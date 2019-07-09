@@ -1,0 +1,16 @@
+<import src="post-item/post-item-tpl.wxml"/>
+
+<view>
+  <swiper class='swiper-content' indicator-dots="true" autoplay="true" interval="5000">
+    <block wx:for="{{banner}}" wx:for-item="item" wx:key="index" wx:for-index="index">
+      <swiper-item catchtap="onCatchtap" data-id="{{item.id}}">
+        <image src='{{item.image}}' mode="aspectFill"/>
+      </swiper-item>
+    </block>
+  </swiper>
+  <block wx:for="{{list}}" wx:key="index" wx:for-item="item" wx:for-index="index">
+    <view class="" catchtap="onCatchtap" data-id="{{item.id}}">
+      <template is="postItem" data="{{...item}}"/>
+    </view>
+  </block>
+</view>

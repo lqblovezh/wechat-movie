@@ -1,0 +1,17 @@
+<template name="postItem">
+  <view class="post-container">
+    <view class="post-author-data" hover-class="none" hover-stop-propagation="false">
+      <image class="post-author" src="{{author_img}}" />
+      <text class="post-data" selectable="false">nov 25 2016</text>
+    </view>
+    <text class="post-title">{{title}}</text>
+    <image class="post-image" src="{{headImgSrc}}" mode="aspectFill"/>
+    <text class="post-content">{{content}}</text>
+    <view class="post-like">
+      <image class="post-like-image" src="/images/icon/1.png" />
+      <text class="post-like-font">{{start}}</text>
+      <image class="post-like-image" src="/images/icon/2.png" />
+      <text class="post-like-font">{{message}}</text>
+    </view>
+  </view>
+</template>

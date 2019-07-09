@@ -1,0 +1,22 @@
+<import src="movie-list-tpl/movie-list-tpl.wxml" />
+<import src="movie-grid-tpl/movie-grid-tpl.wxml"/>
+<view class="search" hover-class="none" hover-stop-propagation="false">
+  <icon type="search" class="search-img" size="13" color="#405f80"></icon>
+  <input placeholder="流浪地球" placeholder-class="placeholder" bindconfirm="onBindConfirm" bindfocus="onBindFocus"/>
+  <image wx:if="{{!containerShow}}" class="close-img" src="/images/icon/close.png" bindtap="onCancelImgTap"/>
+</view>
+<view class='container' wx:if="{{containerShow}}">
+  <view class="movies-template">
+    <template is="movieListTpl" data="{{...intheaters,key:'正在热映'}}" class="movies-template" />
+  </view>
+  <view class="movies-template">
+    <template is="movieListTpl" data="{{...comingSoon,key:'即将上映'}}" class="movies-template" />
+  </view>
+  <view class="movies-template">
+    <template is="movieListTpl" data="{{...top250,key:'经典电影'}}" class="movies-template" />
+  </view>
+</view>
+<view class="search-panel" wx:if="{{!containerShow}}">
+  <template is="movieGridTpl" data="{{...searchResult}}"/>
+</view>
+  

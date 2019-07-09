@@ -1,0 +1,24 @@
+@import '../posts/post-item/post-item-tpl.wxss';
+
+.swiper-content{
+  width: 100%;
+  height: 450rpx;
+}
+.swiper-content image{
+  width: 100%;
+  height: 100%;
+}
+.box {
+  width:100vw;
+  height: 200rpx;
+  white-space: nowrap;
+  border: 1px solid red;
+  box-sizing: border-box
+}
+.box-item {
+  width: 45%;
+  height: 100%;
+  border:2rpx solid green;
+  box-sizing: border-box;
+  display: inline-block
+}

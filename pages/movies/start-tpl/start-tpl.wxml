@@ -1,0 +1,11 @@
+<template name="startTpl">
+  <view class="start-container" hover-class="none" hover-stop-propagation="false">
+    <view class="starts" hover-class="none" hover-stop-propagation="false">
+      <block wx:for="{{stars}}" wx:key="index" wx:for-item="i">
+        <image wx:if="{{i}}" class="" src="/images/icon/9.png" />
+        <image wx:else class="" src="/images/icon/10.png" />
+      </block>
+    </view>
+    <text class="star-score" selectable="false" space="false" decode="false">{{score}}</text>
+  </view>
+</template>

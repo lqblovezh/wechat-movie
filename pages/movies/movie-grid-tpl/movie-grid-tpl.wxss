@@ -1,0 +1,9 @@
+@import "../movie-tpl/movie-tpl.wxss";
+.single-view-container{
+  float: left;
+  margin-bottom: 40rpx;
+}
+.grid-container{
+  margin: 40rpx 0 0 12rpx;
+  height: 1300rpx;
+}

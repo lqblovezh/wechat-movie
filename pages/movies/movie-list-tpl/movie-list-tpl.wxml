@@ -1,0 +1,19 @@
+<import src="../movie-tpl/movie-tpl.wxml" />
+<template name="movieListTpl">
+  <view class="movie-list-container" hover-class="none" hover-stop-propagation="false">
+    <view class="movie-head" hover-class="none" hover-stop-propagation="false">
+      <text class="slogan" selectable="false" space="false" decode="false">{{key}}</text>
+      <view class="more" hover-class="none" hover-stop-propagation="false">
+        <text class="more-text" catchtap="onMoreTap" data-category="{{key}}">更多</text>
+        <image class="more-img" src="/images/icon/11.png" />
+      </view>
+    </view>
+    <view class="movies-container" hover-class="none" hover-stop-propagation="false">
+      <block wx:for="{{movies}}" wx:for-item="movie" wx:key="index">
+        <template is="movieTpl" data="{{...movie}}" />
+      </block>
+      <!-- <template is="movieTpl" />
+      <template is="movieTpl" /> -->
+    </view>
+  </view>
+</template>

@@ -1,0 +1,20 @@
+<view class="container">
+  <image class="head-image" src="{{postData.headImgSrc}}" mode="aspectFit|aspectFill|widthFix" lazy-load="false" binderror="" bindload="" />
+  <image class="audio" catchtap="onMusicTap" src="{{isMusicPaly?'/images/icon/3.png':'/images/icon/4.png'}}" />
+  <view class="author-data" hover-class="none" hover-stop-propagation="false">
+    <image class="avatar" src="{{postData.author_img}}" mode="aspectFit|aspectFill|widthFix" lazy-load="false" binderror="" bindload="" />
+    <text class="author" selectable="false" space="false" decode="false">{{postData.author}}</text>
+    <text class="const-text" selectable="false" space="false" decode="false">发表于</text>
+    <text class="date" selectable="false" space="false" decode="false">{{postData.dateTime}}</text>
+  </view>
+  <text class="title" selectable="false" space="false" decode="false">{{postData.title}}</text>
+  <view class="tool" hover-class="none" hover-stop-propagation="false">
+    <view class="circle-img" hover-class="none" hover-stop-propagation="false">
+      <image class="" wx:if="{{collected}}" catchtap="onCollectionTap" src="/images/icon/1.png"/>
+      <image class="" wx:else class="collected" catchtap="onCollectionTap" src="/images/icon/1.png"/>
+      <image class="share-img" catchtap="onShareTap" src="/images/icon/2.png" mode="aspectFit|aspectFill|widthFix" lazy-load="false" binderror="" bindload="" />
+    </view>
+    <view class="horizon" hover-class="none" hover-stop-propagation="false"></view>
+  </view>
+  <text class="detail" selectable="false" space="false" decode="false">{{postData.detail}}</text>
+</view>
