@@ -1,0 +1,22 @@
+{
+  "name": "wechat-movie",
+  "version": "1.0.0",
+  "description": "A Wechat applet Program for Douban Film",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lqblovezh/wechat-movie.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lqblovezh/wechat-movie/issues"
+  },
+  "homepage": "https://github.com/lqblovezh/wechat-movie#readme",
+  "devDependencies": {
+    "encrypt-value": "^1.1.0"
+  }
+}
